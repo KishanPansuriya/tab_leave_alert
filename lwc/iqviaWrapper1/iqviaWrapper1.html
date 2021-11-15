@@ -1,0 +1,37 @@
+<template>
+    <div class='slds-tabs_default slds-p-around_xx-large'>
+        <ul class='slds-tabs_default__nav'>
+            <li class='slds-tabs_default__item'>
+                <a class='slds-tabs_default__link' name='item_1' onclick={handleNavItemSelection}>Item 1</a>
+            </li>
+            <li class='slds-tabs_default__item slds-is-active'>
+                <a class='slds-tabs_default__link' name='item_2' onclick={handleNavItemSelection}>Item 2</a>
+            </li>
+            <li class='slds-tabs_default__item'>
+                <a class='slds-tabs_default__link' name='item_3' onclick={handleNavItemSelection}>Item 3</a>
+            </li>
+            <li class='slds-tabs_default__item'>
+                <a class='slds-tabs_default__link' name='item_4' onclick={handleNavItemSelection}>Item 4</a>
+            </li>
+            <li class='slds-tabs_default__item'>
+                <a class='slds-tabs_default__link' name='item_5' onclick={handleNavItemSelection}>Item 5</a>
+            </li>
+        </ul>
+        <br/><br/>
+        <template if:true={item_1_selected}>
+            <c-tab-leave-alert onchildformmodified={childFormModified}></c-tab-leave-alert>
+        </template>
+        <template if:true={item_2_selected}>
+            <p>Item 2 content.</p>
+        </template>
+        <template if:true={item_3_selected}>
+            <p>Item 3 content.</p>
+        </template>
+        <template if:true={item_4_selected}>
+            <p>Item 4 content.</p>
+        </template>
+        <template if:true={item_5_selected}>
+            <p>Item 5 content.</p>
+        </template>
+    </div>
+</template>
